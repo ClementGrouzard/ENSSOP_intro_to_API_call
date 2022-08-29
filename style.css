@@ -1,0 +1,83 @@
+.container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+#picture {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+    float: left;
+    background-color: white;
+}
+
+#dislike, #like {
+    width: 130px;
+    position: absolute;
+    z-index: -1;
+    height: 450px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform .2s;
+}
+
+#dislike {
+    left: 0;
+    transform: rotate(-5deg);
+    transform-origin: right bottom;
+    background-color: #c71d1d;
+}
+
+
+#like {
+    right: 0;
+    transform: rotate(5deg);
+    transform-origin: left bottom;
+    background-color: #ffc000;
+}
+
+#dislike:hover{
+    transform: rotate(-15deg);
+}
+
+#like:hover{
+    transform: rotate(15deg);
+}
+
+#like img {
+    width: 60px;
+    margin: 15px;
+    float: right;
+}
+
+#dislike img {
+    width: 60px;
+    margin: 15px;
+}
+
+
+
+#favs {
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    overflow: scroll;
+    padding: 20px;
+    background-color: gray;
+    width: 225px;
+}
+
+
+.fav {
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+    object-fit: cover;
+    display: block;
+    margin: 10px;
+    cursor: not-allowed;
+}
